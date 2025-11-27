@@ -1,0 +1,55 @@
+body { font-family: 'Poppins', sans-serif; background: linear-gradient(135deg,#2a003e,#11001f); color:#f1f5f9; }
+.captcha-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 15px 0;
+  padding: 10px;
+  background: linear-gradient(135deg,#2a003e,#11001f);
+  border-radius: 5px;
+}
+
+.captcha-problem {
+  font-size: 1.2em;
+  font-weight: bold;
+  color:#f1f5f9;
+  padding: 5px 10px;
+  background: linear-gradient(135deg,#2a003e,#11001f);
+  border-radius: 4px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.captcha-input {
+  padding: 8px 12px;
+  border: 1px solid #374151;
+  border-radius: 4px;
+  font-size: 1em;
+  width: 100px;
+  text-align: center;
+}
+
+.captcha-input.valid {
+  border-color:#f1f5f9;
+  background: linear-gradient(135deg,#2a003e,#11001f);
+}
+
+.refresh-captcha {
+  background: linear-gradient(135deg,#2a003e,#11001f);
+  border: none;
+  color:#f1f5f9;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.refresh-captcha:hover {
+  color:#f1f5f9;
+  background: linear-gradient(135deg,#2a003e,#11001f);
+}
+
+.refresh-captcha i {
+  font-size: 1.2em;
+} 
+button, .btn { border-radius: 8px; transition: 0.3s ease; }
+button:hover, .btn:hover { transform: scale(1.05); box-shadow: 0 4px 10px rgba(0,0,0,0.15); }
