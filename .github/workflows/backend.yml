@@ -19,9 +19,7 @@ jobs:
         distribution: 'temurin'
 
     - name: Make mvnw executable
-      working-directory: HKare/backend
-      run: chmod +x mvnw
+      run: chmod +x ./HKare/backend/mvnw
 
     - name: Build Backend
-      working-directory: HKare/backend
-      run: ./mvnw -DskipTests clean package
+      run: ./HKare/backend/mvnw -DskipTests clean package
