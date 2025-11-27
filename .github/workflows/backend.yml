@@ -1,0 +1,31 @@
+name: Backend CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Set up JDK
+      uses: actions/setup-java@v4
+      with:
+        java-version: '17'
+        distribution: 'temurin'
+
+    - name: Build Backend
+      working-directory: HKare/backend
+      run: ./mvnw -DskipTests clean package
+
+    - name: Upload JAR file
+      uses: actions/upload-artifact@v4
+      with:
+        name: backend-jar
+        path: HKare/backend/target/*.jar
